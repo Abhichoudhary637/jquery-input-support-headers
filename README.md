@@ -85,6 +85,26 @@ $(document).ready(function () {
 </script>
 ```
 
+### Include and initialize the plugin with custoom headers in ajax call with support object in token input
+
+Include jQuery and Tokeninput Javascript and stylesheet files on your page, and
+attach to your text input:
+Tokeninput stylesheet:
+
+```html
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="yourfiles/jquery.tokeninput.js"></script>
+<link rel="stylesheet" type="text/css" href="yourfiles/token-input.css" />
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $("#my-text-input").tokenInput({url:"/url/to/your/script/",
+       headers:{customeheaderskey: customeheadersvalue}
+    });
+});
+</script>
+```
+
 ## Configuration
 
 The tokeninput takes an optional second parameter on intitialization which
@@ -157,10 +177,3 @@ available:
 Please report any bugs or feature requests on the github issues page for this
 project here:
 
-<https://github.com/loopj/jquery-tokeninput/issues>
-
-## License
-
-Tokeninput is released under a dual license. You can choose either the GPL or
-MIT license depending on the project you are using it in and how you wish to
-use it.
